@@ -15,9 +15,9 @@ if d~=-1                            % Sicherheitsabfrage, ob Textdati existiert
        for rr=1:160                 % Ablaufen jedes inneren Cell-Arrays
             wort=data{kk}(rr);      % Auslesen der DAten aus Cell-Array in Vektor
             wort=char(wort);        % Umwandeln Cell-Array-Eintrag in String
-            s=regexp(wort,suchwort);% Vergleich Suchwort/Wort
+            s=regexp(suchwort,wort);% Vergleich Suchwort/Wort
             
-            if s==1;
+            if s==1
                 index_k=[index_k; kk-1]; % Extrahieren der Indizes, wo Suchwort gleich Wort
                 index_r=[index_r; rr];     
                 rr=rr+1;                 % Heraufsetzten des Matrixindexes               
