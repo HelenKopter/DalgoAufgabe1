@@ -4,8 +4,16 @@ clc;
 
 
 speaker='cpm0';
-sentence='Dont ask me to carry an oily rag like that';
-word='she';
+sentence='';
+word='';
 phoneme='sh';
 
-[a,b,c,d] = master(speaker, sentence, word, phoneme)
+List = master(speaker, sentence, word, phoneme); % Funktion testen
+
+
+
+
+
+
+
+

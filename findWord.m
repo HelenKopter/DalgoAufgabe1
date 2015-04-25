@@ -15,7 +15,7 @@ if d~=-1                            % Sicherheitsabfrage, ob Textdati existiert
        for rr=1:160                 % Ablaufen jedes inneren Cell-Arrays
             wort=data{kk}(rr);      % Auslesen der DAten aus Cell-Array in Vektor
             wort=char(wort);        % Umwandeln Cell-Array-Eintrag in String
-            s=regexp(suchwort,wort);% Vergleich Suchwort/Wort
+            s=regexpi(suchwort,wort);% Vergleich Suchwort/Wort
             
             if s==1
                 index_k=[index_k; kk-1]; % Extrahieren der Indizes, wo Suchwort gleich Wort
@@ -34,7 +34,7 @@ end
 
 index=[index_r index_k];                % Zusammenfasen der Indexvektoren zu einer MAtrix
 
-findPathWord = data{1}(index_r)         % Dateinamen aus erster Spalte des uebergeordneten Cell-Arrays anhand des Zeilenindexes auslesen
-fclose(d)
+findPathWord = data{1}(index_r);       % Dateinamen aus erster Spalte des uebergeordneten Cell-Arrays anhand des Zeilenindexes auslesen
+fclose(d);
 end
 
