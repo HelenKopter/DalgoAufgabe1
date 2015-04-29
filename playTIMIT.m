@@ -165,6 +165,28 @@ elseif isEmptySpeaker == 1 && isEmptySentence == 1 && isEmptyWord == 1 && isEmpt
 %__________________________________________________________________________
 
 end
+    endlist = char(List);
+    attachwav= [];
+    attach_opendir = [];
     
+    for kk = 1:length(List)
+        attachwav(kk,:) = ['\' endlist(kk,:) '.wav'];
+    end
     
+    fname = char(attachwav); 
+    fname = cellstr(fname);
+    fname = strrep(fname,' ','');
+    fnameneu = char(fname);
+    
+    for ll=1: length(fname)
+        attach_opendir(ll,:) = [opendir fnameneu(ll,:)];
+    end
+
+    pfadcomplette = char(attach_opendir);
+    pfadcomplette = cellstr(pfadcomplette);
+
+    timit_list = uicontrol('style','listbox',...
+                           'string',pfadcomplette,...
+                           'callback',@playselectedaudio,...
+                           'position',[100 200 300 100]);
 end
