@@ -23,5 +23,5 @@ end
 %index=[1 index_k];                % Zusammenfasen der Indexvektoren zu einer MAtrix
 
 findPathID = data{1}(index_r);         % Dateinamen aus erster Spalte des uebergeordneten Cell-Arrays anhand des Zeilenindexes auslesen
-fclose(d)
+fclose(d);
 end
