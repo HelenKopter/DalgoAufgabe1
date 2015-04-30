@@ -184,9 +184,17 @@ end
 
     pfadcomplette = char(attach_opendir);
     pfadcomplette = cellstr(pfadcomplette);
-
+    
+    fig = figure(1);
+    set(gcf,'name','TIMIT MIT Search Result')
+    
+    text1 = uicontrol('style','text',...
+                      'string', 'We found some recordings! Just click to the data to play the recordings',...
+                      'position',[60 320 400 15]);
+   
+                  
     timit_list = uicontrol('style','listbox',...
                            'string',pfadcomplette,...
                            'callback',@playselectedaudio,...
-                           'position',[100 200 300 100]);
+                           'position',[100 200 400 100]);
 end
