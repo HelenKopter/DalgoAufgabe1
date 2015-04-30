@@ -1,16 +1,14 @@
 function[List] = master(speaker, sentence, word, phoneme)
 
 
-
+%%
 %--------Abfrage, ob etwas in den Eingabeparametern enthalten--------------
 isEmptySpeaker = isempty(speaker);
 isEmptySentence  = isempty(sentence);
 isEmptyWord = isempty(word);
 isEmptyPhoneme = isempty(phoneme);
 
-%__________________________________________________________________________
-
-%
+%%
 if isEmptySpeaker == 0 && isEmptySentence == 0 && isEmptyWord == 0 && isEmptyPhoneme == 0
 
 % Suche der Textdateien, in denen das jeweilige Eingabeparameter enthalten ist
@@ -37,8 +35,7 @@ elseif isEmptySpeaker == 0 && isEmptySentence == 0 && isEmptyWord == 0 && isEmpt
     sentenceList = sentenceList(find(ismember(sentenceList,wordList)));
     List = speakerList(find(ismember(speakerList,sentenceList)));
 
-%__________________________________________________________________________
-
+%%
 elseif isEmptySpeaker == 0 && isEmptySentence == 0 && isEmptyWord == 1 && isEmptyPhoneme == 0
     speakerList = findSpeaker(speaker);
     sentenceList = findSentence(sentence);
@@ -152,6 +149,6 @@ elseif isEmptySpeaker == 1 && isEmptySentence == 1 && isEmptyWord == 1 && isEmpt
 %__________________________________________________________________________
 
 end
-
+List = sort(List);
 
 end
