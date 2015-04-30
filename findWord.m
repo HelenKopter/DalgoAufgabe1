@@ -34,7 +34,7 @@ end
 
 index=[index_r index_k];                % Zusammenfasen der Indexvektoren zu einer MAtrix
 
-findPathWord = data{1}(index_r);       % Dateinamen aus erster Spalte des uebergeordneten Cell-Arrays anhand des Zeilenindexes auslesen
+findPathWord = unique(data{1}(index_r));       % Dateinamen aus erster Spalte des uebergeordneten Cell-Arrays anhand des Zeilenindexes auslesen
 fclose(d);
 end
 
