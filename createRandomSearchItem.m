@@ -1,6 +1,10 @@
 function [ randomSearchItem] = createRandomSearchItem()
-%CREATERANDOMSEARCHITEM is a function
-
+%Usage: createRandomSearchItem()
+% Input parameter:
+%       None
+% Output parameter:
+%       Vector with random values [speaker, sentence, word, phoneme]
+%       taken from data base 'TIMIT MIT'
 
 
 %% Speaker
@@ -14,8 +18,6 @@ dataSpeaker = dataSpeaker(:,6:9);           % Extrahieren der Buchstaben
                                               % des Sprechercodes
                                             
 dataSpeaker = unique(dataSpeaker, 'rows');  % Loeschen redundanter Elemente
-% .... wie kann ich leeres element einfuegen??
-
 
 idx=randi(length(dataSpeaker),1);           % Bestimmen eines zufaelligen Indexes 
 speaker= dataSpeaker(idx,:);                % Extrahieren der zu dem Zufallsindex 
@@ -32,9 +34,7 @@ dataSentence = textscan(se,'%s %s');          % Trennen der Ordnernamen
 dataSentence = dataSentence{2};               % Extrahieren der Saetze
 dataSentence = char(dataSentence);            % Umwandeln in Character-String
 dataSentence = unique(dataSentence, 'rows');  % Loeschen redundanter Elemente
-% dataleer = repmat({''}, [130 68]);
-dataSentence = [dataSentence; dataleer];
-% .... wie kann ich leeres element einfuegen??
+
 idx=randi(length(dataSentence),1);            % Bestimmen eines zufaelligen Indexes
 sentence= dataSentence(idx,:);                % Extrahieren der zu dem Zufallsindex 
                                                 % gehoerenden Cell-Elemente
@@ -79,8 +79,44 @@ phonemes= phonemes(idx,:);                      % Extrahieren der zu dem Zufalls
                                                     %gehoerenden Cell-Elemente
  
 %%
-randomSearchItem = [speaker, sentence, words, phonemes]; 
+%randomSearchItem = [speaker, sentence, words, phonemes]; 
                                                 % Zusammenfassen zu einem
                                                 % Ausgabevektor
+                                                 
+randomNumber= randi([1, 15], 1);
+switch randomNumber
+    case 1
+        randomSearchItem = [speaker, sentence, words, phonemes]; 
+    case 2
+        randomSearchItem = [speaker, sentence, words, {''}];  
+    case 3
+        randomSearchItem = [speaker, sentence, {''}, phonemes];
+    case 4
+        randomSearchItem = [speaker, sentence, {''}, {''}];
+    case 5
+        randomSearchItem = [speaker, {''}, words, phonemes];
+    case 6
+        randomSearchItem = [speaker, {''}, words, {''}];
+    case 7
+        randomSearchItem = [speaker, {''}, {''}, phonemes];
+    case 8
+        randomSearchItem = [speaker, {''}, {''}, {''}];
+    case 9
+        randomSearchItem = [{''}, sentence, words, phonemes];
+    case 10
+        randomSearchItem = [{''}, sentence, words, {''}]; 
+    case 11
+        randomSearchItem = [{''}, sentence, {''}, phonemes];
+    case 12
+        randomSearchItem = [{''},sentence, {''}, {''}];
+    case 13
+        randomSearchItem = [{''}, {''}, words, phonemes];
+    case 14
+        randomSearchItem = [{''}, {''}, words, {''}];
+    case 15
+        randomSearchItem = [{''}, {''}, {''}, {phonemes}];
+    
+end                                      
+                                                
 end
 
