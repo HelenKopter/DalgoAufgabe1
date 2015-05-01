@@ -1,5 +1,5 @@
 function[List] = master(speaker, sentence, word, phoneme)
-
+allsenlistwithoutspace;
 
 %%
 %--------Abfrage, ob etwas in den Eingabeparametern enthalten--------------
@@ -145,7 +145,7 @@ elseif isEmptySpeaker == 1 && isEmptySentence == 1 && isEmptyWord == 1 && isEmpt
 %__________________________________________________________________________
 
 elseif isEmptySpeaker == 1 && isEmptySentence == 1 && isEmptyWord == 1 && isEmptyPhoneme == 1
-    disp('Bitte was eingeben')
+    disp('Please enter search item.')
 %__________________________________________________________________________
 
 end

@@ -4,8 +4,10 @@ function [List]= playTIMIT()
     % 'ismember' alles vergleichen, damit wir nur die überschneidenden
     % Dateien bekommen.
     
-    opendir = uigetdir('C:\','Please select your TIMIT_MIT directory');
-    
+    %opendir = uigetdir('C:\','Please select your TIMIT_MIT directory');
+    opendir = pwd;
+    %opendir=('C:\Users\JanTjorben\Documents\Studium_gesichert_150427\4.Sem\WP_Daten_und-Algorithmen\DalgoAufgabe1\DalgoAufgabe1\TIMIT MIT')
+    disp('All inputs have to be written as a string (in apostrophes).')
     speaker = input('Type the speaker ID, or press ENTER to continue: ');
     
     sentence = input('Type the sentence,or press ENTER to continue: ');
@@ -23,7 +25,9 @@ function [List]= playTIMIT()
     for kk = 1:length(List)
         attachwav(kk,:) = ['\' endlist(kk,:) '.wav'];
     end
-    
+    if 1==isempty(endlist)
+       disp('No matches found.')
+    else
     fname = char(attachwav); 
     fname = cellstr(fname);
     fname = strrep(fname,' ','');
@@ -37,15 +41,18 @@ function [List]= playTIMIT()
     pfadcomplette = cellstr(pfadcomplette);
     
     fig = figure(1);
+    set(gcf,'Position',[20 20 900 600])
     set(gcf,'name','TIMIT MIT Search Result')
     
     text1 = uicontrol('style','text',...
+                      
                       'string', 'We found some recordings! Just click to the data to play the recordings',...
-                      'position',[60 320 400 15]);
+                      'position',[20 520 400 25]);
    
                   
     timit_list = uicontrol('style','listbox',...
                            'string',pfadcomplette,...
                            'callback',@playselectedaudio,...
-                           'position',[100 200 400 100]);
+                           'position',[20 10 800 500]);
+    end
 end
