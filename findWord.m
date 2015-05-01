@@ -1,6 +1,13 @@
-%Sicherheitsabfrage spezifizieren !!! (Fehlermeldung ergaenzen)
-% Automatisieren Anzahl der Platzhalter (%s)
-function [findPathWord] = findWord(suchwort)
+function [findPathWord] = findWord(lookForWord)
+% function to find filenames of files contenting word 
+% Usage: findWord(suchwort)
+% Input parameter:
+%       suchwort:     word you want to look for
+% Output parameter:
+%       filenames of files contenting the word you want to look for
+%--------------------------------------------------------------------------
+% Example: pathWord = findWord('oily');
+% 
 index_k=[];                         % Vorallokieren des Indexvektors der Wortposition im Satz
 index_r=[];                         % Vorallokieren des Indexvektors der Satzpostion, in dem Wort enthalten
 
@@ -13,9 +20,9 @@ if d~=-1                            % Sicherheitsabfrage, ob Textdati existiert
        data{kk};
        
        for rr=1:160                 % Ablaufen jedes inneren Cell-Arrays
-            wort=data{kk}(rr);      % Auslesen der DAten aus Cell-Array in Vektor
-            wort=char(wort);        % Umwandeln Cell-Array-Eintrag in String
-            s=strcmp(wort,suchwort);% Vergleich Suchwort/Wort
+            word=data{kk}(rr);      % Auslesen der DAten aus Cell-Array in Vektor
+            word=char(word);        % Umwandeln Cell-Array-Eintrag in String
+            s=strcmp(word,lookForWord);% Vergleich Suchwort/Wort
             
             if s==1
                 index_k=[index_k; kk-1]; % Extrahieren der Indizes, wo Suchwort gleich Wort
