@@ -5,6 +5,7 @@ function [List]= playTIMIT()
     % Dateien bekommen.
     
     opendir = pwd;
+    opendir = [opendir '\TIMIT MIT'];
     disp('All inputs have to be written as a string (in apostrophes).')
     speaker = input('Type the speaker ID, or press ENTER to continue: ');
     
