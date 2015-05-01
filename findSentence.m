@@ -1,12 +1,23 @@
-function [findPathSen] = findSentence(suchsatz)
-
-% This is a function to find the *.wav data according to the sentence
-% spoken during the recording. As "suchsatz" please input your sentence,
+function [findPathSen] = findSentence(lookForSentence)
+% function to find filenames of files contenting the sentence you were
+% looking for
+% Usage: findSentence(suchsatz)
+% Input parameter:
+%       suchsatz: sentence you want to look for
+% Output parameter:
+%       filenames of files contenting sentence
+%--------------------------------------------------------------------------
+% As "suchsatz" please input your sentence,
 % but ignore the apostrophes and points. Example: 'Dont ask me to carry an oily rag like
 % that' (instead of: 'Don''t ask me to carry an oily rag like that.').
+%--------------------------------------------------------------------------
+% Example: pathSentence = findSentence('Don''t ask me to carry an oily rag like that');
+% 
 
-suchsatz= strrep(suchsatz,' ','');  % Replace sentence to be without space
-suchsatz= lower(suchsatz);          % sentence should be written in lowercase
+
+
+lookForSentence= strrep(lookForSentence,' ','');  % Replace sentence to be without space
+lookForSentence= lower(lookForSentence);          % sentence should be written in lowercase
 %suchsatz= strrep(suchsatz,'"', '');% Wenn mit " eingegeben wird, wird der
                                     %" an dieser Stelle herausgefiltert
 %index_k=[];                         % Vorallokieren des Indexvektors der Wortposition im Satz
@@ -20,9 +31,9 @@ if d~=-1                            % Sicherheitsabfrage, ob Textdati existiert
    compare=strrep(data{1,2},'''','');
        
        for rr=1:length(data{1,2})                 % Ablaufen jedes inneren Cell-Arrays
-            wort=compare(rr);       % Auslesen der DAten aus Cell-Array in Vektor
-            wort=char(wort);        % Umwandeln Cell-Array-Eintrag in String
-            s=regexp(suchsatz,wort);% Vergleich Suchwort/Wort
+            sentence=compare(rr);       % Auslesen der DAten aus Cell-Array in Vektor
+            sentence=char(sentence);        % Umwandeln Cell-Array-Eintrag in String
+            s=regexp(lookForSentence,sentence);% Vergleich Suchwort/Wort
             
             if s==1
                 %index_k=[index_k; kk-1]; % Extrahieren der Indizes, wo Suchwort gleich Wort
