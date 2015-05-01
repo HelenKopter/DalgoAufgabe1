@@ -4,18 +4,33 @@ DalgoAufgabe1: TIMIT MIT Project
 This is a project done by Helen Heinermann, Jan-Tjorben Arning, and Felicia Primadita as a part of the group assignment on the major: Data and Algorithm (*deutsch: Daten und Algorithmen*) for the summer semester 2015.
 
 ##Aim of the project
-The project consists of some programms and functions that are useful to 
-search for recordings that exist in the database TIMIT MIT according to 4 variables: phonemes, words, sentences, and speakers in the TIMIT MIT folder. Using the functions, one is also able to combine those 4 variables.
+The project consists of some programs and functions that are useful to 
+search for recordings that exist in the database TIMIT MIT according to 4 parameters: phonemes, words, sentences, and speakers. Using the functions, one is also able to combine those 4 parameters.
 
-##Was tut das Projekt
+##How does the project work?
 
-##Was für ein Software brauch ich um das Program zu erfüllen.
-To be able to run the datas, you need MATLAB. Besides, you need also to have the folder TIMIT MIT to be available in your directory. If you don't have any TIMIT MIT folder, you may download it here: <i class="icon-provider-dropbox"></i> [**Dropbox**](https://www.dropbox.com/sh/yf5r8lc6ye0qput/AADd_rf8l8uF-2gJW81x1faZa?dl=0)
+Our programs compare the search term entries with the entries in the TIMIT MIT database. Basically, the programs access to the .*txt-documents in the TIMIT MIT database, which summarize the speakers ID, phonemes, words and sentences. If there's any match, the result(s) will be the names of all recordings, in which the search term consists. For combination of the search parameters, the result(s) will be the names of all recordings, which are only true for all inserted parameters. The results will be shown on a GUI-listbox and by clicking on the name, the selected data will be played.
 
-## Wie bediene ich die Dateien
+##What do I need to be able to execute my program?
 
+To be able to run the datas, you need MATLAB of any version. The programs are so adjusted, that the programs can be executed in any operating system (e.g: Windows, Linux,Mac). IMPORTANT: until Version R2015, all versions are still able to use 'wavread'. For the case that in the future this function is deleted by MATLAB, please change "wavread" in function "playselectedaudio.m",row 5 into "audioread". Take note that this might cause that the recordings can be played only with Windows.
+
+Besides, you need also to have the TIMIT MIT database to be available in your directory. The functions/programs should be saved in the TIMIT MIT  directory. 
+
+If you don't have any TIMIT MIT folder, you may download it here: <i class="icon-provider-dropbox"></i> [**Dropbox**](https://www.dropbox.com/sh/yf5r8lc6ye0qput/AADd_rf8l8uF-2gJW81x1faZa?dl=0)
 
 ##Was liegt wo
+
+## Instruction Manual
+
+ 1. Make sure that your TIMIT MIT folder is in the directory, you are working in (where the project functions are saved). 
+ 2. Execute playTIMIT.m im MATLAB.
+ 3. in the command window, you are now asked to type in your search item.
+ 4. There are 4 parameters, that will be asked in the command window one after the other with following sequence:  1) speaker, 2)sentence, 3)word and 4) phoneme. 
+ 5. Type your input in as a string (in apostrophes).
+ 6. It is possible, that not all inputs are filled in. IMPORTANT : there should be at least one parameter filled in.
+
+
 
 ##Benutzungsbeispiele
 
