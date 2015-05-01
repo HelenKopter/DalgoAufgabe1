@@ -4,9 +4,7 @@ function [List]= playTIMIT()
     % 'ismember' alles vergleichen, damit wir nur die überschneidenden
     % Dateien bekommen.
     
-    %opendir = uigetdir('C:\','Please select your TIMIT_MIT directory');
     opendir = pwd;
-    %opendir=('C:\Users\JanTjorben\Documents\Studium_gesichert_150427\4.Sem\WP_Daten_und-Algorithmen\DalgoAufgabe1\DalgoAufgabe1\TIMIT MIT')
     disp('All inputs have to be written as a string (in apostrophes).')
     speaker = input('Type the speaker ID, or press ENTER to continue: ');
     
