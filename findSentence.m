@@ -8,10 +8,9 @@ function [findPathSen] = findSentence(lookForSentence)
 %       filenames of files contenting sentence
 %--------------------------------------------------------------------------
 % As "suchsatz" please input your sentence,
-% but ignore the apostrophes and points. Example: 'Dont ask me to carry an oily rag like
-% that' (instead of: 'Don''t ask me to carry an oily rag like that.').
+% but ignore the apostrophes and points. 
 %--------------------------------------------------------------------------
-% Example: pathSentence = findSentence('Don''t ask me to carry an oily rag like that');
+% Example: pathSentence = findSentence('Dont ask me to carry an oily rag like that');
 % 
 
 
