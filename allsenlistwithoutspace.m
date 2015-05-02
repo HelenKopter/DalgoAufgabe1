@@ -1,5 +1,5 @@
 function allsenlistwithoutspace
-d=fopen('allsenlist.txt');                  %oeffnen der Datei
+d=fopen('TIMIT MIT\allsenlist.txt');                  %oeffnen der Datei
 data=textscan(d,'%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s');
                                             %einlesen der Datei in data
 fclose(d);                                  %schlieﬂen der Datei
