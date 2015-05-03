@@ -24,6 +24,9 @@ better: Besides, you also need to have the TIMIT MIT database to be available in
 Installationshinweise:
 "Installationshinweise"
 Better: Installation instructions
+"**NOTE:**
+Please make sure that all functions from this project are copied as well directly in the TIMIT MIT database, **not** in any TIMIT MIT subfolders."
+Better: Please make sure to copy the TIMIT MIT folder into the directory you are working in (where the functions of this project are saved). (ODER???, so funktioniert es doch ne?)
 
 Instruction Manual:
 " 6. It is possible, that not all inputs are filled in."
