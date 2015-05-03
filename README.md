@@ -11,15 +11,15 @@ search for recordings that exist in the database TIMIT MIT according to 4 parame
 
 Our programs compare the search term entries with the entries in the TIMIT MIT database. Basically, the programs access to the .*txt-documents in the TIMIT MIT database, which summarize the speakers ID, phonemes, words and sentences. If there's any match, the result(s) will be the names of all recordings, in which the search term consists. For combination of the search parameters, the result(s) will be the name of all recordings, which are only true for all inserted parameters. The results will be shown on a GUI-listbox and by clicking on the name, the selected data will be played.
 
-The master test is written as a check(in the first line checking master.m), wheather the functions are working properly. The master test generates a random input combinations, that then will be return to the master.m function. If the function is not working, then an error message will be shown in the command window.
+The master test is written as a check(in the first line checking master.m), wheather the functions are working properly. The master test generates a random input combination, that then will be returned to the master.m function. If the function is not working, then an error message will be shown in the command window.
 
-###What do I need to be able to execute my program?
+###What do I need to be able to execute the program?
 
-To be able to run the datas, you need MATLAB (up to R2013). The programs are so adjusted, that the programs can be executed without any problem in Windows. This project is not suitable for Linux or any other operating systems.
+To be able to run the datas, you need MATLAB (up to R2013). The programs are adjusted to work properly in Windows. This project is not suitable for Linux or any other operating systems.
 
-Besides, you need also to have the TIMIT MIT database to be available in your directory. The functions/programs should be saved in the TIMIT MIT  directory. 
+Besides, you also need to have the TIMIT MIT database to be available in your directory. The functions/programs should be saved in the TIMIT MIT  directory. 
 
-###Installationshinweise
+###Installation instruction
 
 If you need any version of MATLAB, then you can find the software also online here:  [MATLAB](http://de.mathworks.com/products/matlab/whatsnew.html?s_tid=tb_15a).
 
@@ -36,7 +36,7 @@ Please make sure that all functions from this project are copied as well directl
  3. in the command window, you are now asked to type in your search item.
  4. There are 4 parameters, that will be asked in the command window one after the other with following sequence:  1) speaker, 2)sentence, 3)word and 4) phoneme. 
  5. Type your input in as a string (in apostrophes).
- 6. It is possible, that not all inputs are filled in. 
+ 6. You are able to type in one to four input parameters in desired combination. 
  >**IMPORTANT** : there should be at least one parameter filled in.
 
 ###Usage Examples
@@ -70,10 +70,10 @@ If you don't want to input any words, just leave it and go to the next section b
 The answer is basically an easy string. For example: 
 ```Type the phoneme, or press ENTER to continue:'sh'```
 
-7. By clicking <kbd>Return <-- </kbd> after the fourth line, the name of datas, which is true for all combinations will be appeared on the command window. Beside that, GUI will be appeared as well. As you click on one of the name, the recording will be played.
+7. By clicking <kbd>Return <-- </kbd> after the fourth line, the name of datas, which is true for all combinations will appear on the command window. Beside that, GUI will appear as well. As you click on one of the names, the recording will be played.
 
 
 
 ###License
 
-TIMIT MIT Project is free project; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  See the GNU General Public License for more details: e.g. in the file 'GNU-GPL' that follows with this psylab package or at http://www.gnu.org/licenses/gpl
+TIMIT MIT Project is free project; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  See the GNU General Public License for more details: e.g. in the file 'GNU-GPL' that follows with thisTIMIT MIT Project or at http://www.gnu.org/licenses/gpl
