@@ -11,7 +11,7 @@ search for recordings that exist in the database TIMIT MIT according to 4 parame
 
 Our programs compare the search term entries with the entries in the TIMIT MIT database. Basically, the programs access to the .*txt-documents in the TIMIT MIT database, which summarize the speakers ID, phonemes, words and sentences. If there's any match, the result(s) will be the names of all recordings, in which the search term consists. For combination of the search parameters, the result(s) will be the name of all recordings, which are only true for all inserted parameters. The results will be shown on a GUI-listbox and by clicking on the name, the selected data will be played.
 
-The master test is written as a check(in the first line checking master.m), wheather the functions are working properly. The master test generates a random input combination, that then will be returned to the master.m function. If the function is not working, then an error message will be shown in the command window.
+The master test is written as a check (in the first line checking master.m), wheather the functions are working properly. The master test generates a random input combination, that then will be returned to the master.m function. If the function is not working, then an error message will be shown in the command window.
 
 ###What do I need to be able to execute the program?
 
@@ -26,7 +26,7 @@ If you need any version of MATLAB, then you can find the software also online he
 In case that you don't have TIMIT MIT database, you may download it here: <i class="icon-provider-dropbox"></i> [**Dropbox**](https://www.dropbox.com/sh/yf5r8lc6ye0qput/AADd_rf8l8uF-2gJW81x1faZa?dl=0). This database consists only the recordings and the *.txt-summarization documents, but not the programs from the TIMIT MIT-Project. 
 
 >**NOTE:**
-Please make sure that all functions from this project are copied as well directly in the TIMIT MIT database, **not** in any TIMIT MIT subfolders.
+Make sure that your TIMIT MIT folder is installed in the directory, you are working in (where the project functions are saved).
 
 
 ###Instruction Manual
@@ -76,4 +76,4 @@ The answer is basically an easy string. For example:
 
 ###License
 
-TIMIT MIT Project is free project; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  See the GNU General Public License for more details: e.g. in the file 'GNU-GPL' that follows with thisTIMIT MIT Project or at http://www.gnu.org/licenses/gpl
+TIMIT MIT Project is free project; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.  See the GNU General Public License for more details: e.g. in the file 'GNU-GPL' that follows with this TIMIT MIT Project or at http://www.gnu.org/licenses/gpl
