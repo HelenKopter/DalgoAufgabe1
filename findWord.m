@@ -7,6 +7,7 @@ function [findPathWord] = findWord(lookForWord)
 %       filenames of files contenting the word you want to look for
 %--------------------------------------------------------------------------
 % Example: pathWord = findWord('oily');
+%          pathWord = findWord('don''t'); %please include the apostrophe
 % 
 index_k=[];                         % Vorallokieren des Indexvektors der Wortposition im Satz
 index_r=[];                         % Vorallokieren des Indexvektors der Satzpostion, in dem Wort enthalten
